@@ -82,20 +82,43 @@ object {
 }
 
 .programbox {
-width: 1600px;
-padding: 10px;
-background-color: rgb(255, 255, 255);
-text-align: left;
-font-weight: bold;
-display: flex;
-flex-direction: column; /* Ensures content stacks vertically */
-justify-content: flex-start;
-align-items: flex-start;
-border: none; /* Remove all borders first */
-border-top: 2px solid black; /* Only top border */
-margin: 20px auto;
-min-height: auto;
+    width: 1600px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Ensures content stacks vertically */
+    justify-content: flex-start; /* Aligns content to the top */
+    align-items: flex-start; /* Aligns items to the left */
+    border: none;
+    border-top: 2px solid black; /* Only top border */
+    margin: 20px 0; /* Remove auto margin to prevent centering */
+    min-height: auto;
 }
+
+.imagebox {
+    width: 300px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: flex-start; /* Keeps the text to the left */
+    align-items: center;
+    border: none;
+    margin: 20px 0;
+    min-height: auto;
+    gap: 10px; /* Adds space between text and image */
+}
+
+.imagebox img {
+    width: 100%; /* Set to a more reasonable image size */
+    height: auto; /* Keeps the image's aspect ratio intact */
+    object-fit: contain; /* Ensures the image doesn't stretch */
+}
+
 titletext {
     font-size: 100px
 }
