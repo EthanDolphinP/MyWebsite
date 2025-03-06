@@ -10,14 +10,14 @@
     }
 
     body {
-        text-align: center; /* Centers all text content */
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     object {
-        background-color: rgb(255, 255, 255); 
+        background-color: rgb(255, 255, 255);
     }
 
     .banner {
@@ -26,9 +26,20 @@
         background-color: rgb(0, 0, 0);
         color: white;
         display: flex;
-        align-items: right;
-        justify-content: right;
+        align-items: center;
+        justify-content: space-between;
         padding: 0 20px;
+    }
+
+    .banner p {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .banner-buttons {
+        display: flex;
+        gap: 10px;
     }
 
     .banner-button {
@@ -40,7 +51,6 @@
         font-weight: bold;
         cursor: pointer;
         transition: background 0.3s ease;
-        margin: 5px
     }
 
     .banner-button:hover {
@@ -70,19 +80,27 @@
         font-weight: bold;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Centers boxes inside */
+        justify-content: center;
         align-items: center;
         border: 2px solid rgb(0, 0, 0);
-        margin: 20px auto; /* Centers the bigbox */
+        margin: 20px auto;
     }
 </style>
+<script>
+    function navigateTo(page) {
+        window.location.href = page;
+    }
+</script>
 </head>
 <body>
 
 <!-- Banner -->
 <div class="banner">
-    <button class="banner-button">Info</button>
-    <button class="banner-button">Home</button>
+    <p>Ethan's Website</p>
+    <div class="banner-buttons">
+        <button class="banner-button" onclick="navigateTo('InfoPage.html')">Info</button>
+        <button class="banner-button" onclick="navigateTo('WebsiteHome.html')">Home</button>
+    </div>
 </div>
 
 <h1>Welcome!</h1>
@@ -101,13 +119,10 @@
     <div class="box"><p>Box 6</p></div>
 </div>
 
-<h2>Resume!</h2>
-<object data="Placeholder.pdf" type="application/pdf" width="500" height="800">
-    <p>Your browser does not support PDFs. <a href="Placeholder.pdf">Download the PDF</a>.</p>
-</object>
-
 <h2>My Github!</h2>
 <a href="https://github.com/EthanDolphinP">Ethan's Github</a>
+<h4>Websites Github</h4>
+<a href="https://github.com/EthanDolphinP/MyWebsite">Ethan's Github</a>
 
 </body>
 </html>
